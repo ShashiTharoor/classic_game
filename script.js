@@ -97,12 +97,12 @@ function gameLoop() {
   drawGame();
 }
 
-// Start the game
 function startGame() {
+  console.log("Start Game button clicked!"); // Debugging log
   if (!isGameRunning) {
     isGameRunning = true;
     generateFood();
-    gameInterval = setInterval(gameLoop, 100); // Run the game loop every 100ms
+    gameInterval = setInterval(gameLoop, 100);
   }
 }
 
