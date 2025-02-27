@@ -1,0 +1,105 @@
+{
+    "particles": {
+      "number": {
+        "value": 80, // Number of particles
+        "density": {
+          "enable": true,
+          "value_area": 800 // Area density for particle distribution
+        }
+      },
+      "color": {
+        "value": "#ffffff" // White color for particles
+      },
+      "shape": {
+        "type": "circle", // Particle shape (circle, square, etc.)
+        "stroke": {
+          "width": 0, // No border around particles
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5 // Number of sides for polygon shapes (not used here)
+        }
+      },
+      "opacity": {
+        "value": 0.5, // Transparency of particles
+        "random": false, // Uniform opacity
+        "anim": {
+          "enable": false, // Disable opacity animation
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3, // Size of particles
+        "random": true, // Random size variation
+        "anim": {
+          "enable": false, // Disable size animation
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true, // Connect particles with lines
+        "distance": 150, // Maximum distance for line connections
+        "color": "#ffffff", // Line color
+        "opacity": 0.4, // Line transparency
+        "width": 1 // Line thickness
+      },
+      "move": {
+        "enable": true, // Enable particle movement
+        "speed": 2, // Movement speed
+        "direction": "none", // Random direction
+        "random": false, // Uniform speed
+        "straight": false, // Non-linear movement
+        "out_mode": "out", // Particles disappear when out of bounds
+        "bounce": false, // Disable bouncing
+        "attract": {
+          "enable": false, // Disable attraction between particles
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas", // Detect interactions on the canvas
+      "events": {
+        "onhover": {
+          "enable": true, // Enable hover interaction
+          "mode": "repulse" // Particles repel on hover
+        },
+        "onclick": {
+          "enable": true, // Enable click interaction
+          "mode": "push" // Add new particles on click
+        },
+        "resize": true // Adjust particles on window resize
+      },
+      "modes": {
+        "grab": {
+          "distance": 400, // Distance for grab effect
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200, // Repulsion distance
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4 // Number of particles added on click
+        },
+        "remove": {
+          "particles_nb": 2 // Number of particles removed on interaction
+        }
+      }
+    },
+    "retina_detect": true // Enable high-DPI support
+  }

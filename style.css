@@ -1,0 +1,98 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Black background for contrast */
+    color: #fff; /* White text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+  }
+  
+  /* Particles Background */
+  #particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure particles stay in the background */
+  }
+  
+  /* Game Title */
+  .game-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #00ff00; /* Neon green for a retro feel */
+  }
+  
+  /* Game Canvas */
+  #gameCanvas {
+    display: block;
+    background-color: #111; /* Dark gray background for the game area */
+    border: 2px solid #fff; /* White border for visibility */
+    margin: 20px 0;
+    width: 400px; /* Fixed width for desktop */
+    height: 400px; /* Fixed height for desktop */
+  }
+  
+  /* Responsive Canvas */
+  @media (max-width: 600px) {
+    #gameCanvas {
+      width: 300px;
+      height: 300px;
+    }
+  }
+  
+  /* Game UI Buttons */
+  .game-ui {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff; /* Blue button background */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Score Display */
+  .score-display {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  
+  .score-display span {
+    font-weight: bold;
+    color: #00ff00; /* Neon green for score */
+  }
+  
+  /* Instructions */
+  .instructions {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #ccc; /* Light gray for instructions */
+    margin-top: 20px;
+  }
