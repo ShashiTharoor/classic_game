@@ -58,7 +58,7 @@ This project is a classic Snake game implemented using HTML, CSS, and JavaScript
 1. **Clone or Download the Repository**:
    - Clone this repository using Git:
      ```bash
-     git clone https://github.com/your-repo-url/classic-snake-game.git
+     git clone https://github.com/ShashiTharoor/classic_game
      ```
    - Or download the ZIP file and extract it.
 
