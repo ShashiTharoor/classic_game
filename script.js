@@ -5,7 +5,6 @@ const startButton = document.getElementById('startButton');
 const pauseButton = document.getElementById('pauseButton');
 const resetButton = document.getElementById('resetButton');
 const scoreDisplay = document.getElementById('score');
-const highScoreDisplay = document.getElementById('highScore'); // New: High score display
 
 // Game variables
 let snake = [{ x: 200, y: 200 }]; // Initial snake position
@@ -15,10 +14,6 @@ let dy = 0; // Vertical velocity
 let score = 0;
 let isGameRunning = false;
 let gameInterval;
-
-// High score tracking
-let highScore = localStorage.getItem('highScore') || 0; // Retrieve high score from localStorage
-highScoreDisplay.textContent = highScore; // Display the high score
 
 // Set canvas dimensions dynamically
 function setCanvasSize() {
@@ -61,14 +56,6 @@ function updateGame() {
   if (head.x === food.x && head.y === food.y) {
     score++;
     scoreDisplay.textContent = score;
-
-    // Update high score if current score is higher
-    if (score > highScore) {
-      highScore = score;
-      highScoreDisplay.textContent = highScore;
-      localStorage.setItem('highScore', highScore); // Save high score to localStorage
-    }
-
     generateFood();
   } else {
     snake.pop(); // Remove the tail if no food is eaten
@@ -97,12 +84,12 @@ function gameLoop() {
   drawGame();
 }
 
+// Start the game
 function startGame() {
-  console.log("Start Game button clicked!"); // Debugging log
   if (!isGameRunning) {
     isGameRunning = true;
     generateFood();
-    gameInterval = setInterval(gameLoop, 100);
+    gameInterval = setInterval(gameLoop, 100); // Run the game loop every 100ms
   }
 }
 
